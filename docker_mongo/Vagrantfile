@@ -1,0 +1,12 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  config.vm.box = "hashicorp/precise64"
+  config.berkshelf.enabled = true
+  config.berkshelf.berksfile_path = "../chef-repo/cookbooks/git_started/Berksfile"
+  config.vm.provision "chef_solo" do |chef|
+    chef.add_recipe "git"
+    chef.cookbooks_path = "../chef-repo/cookbooks"
+  end
+end

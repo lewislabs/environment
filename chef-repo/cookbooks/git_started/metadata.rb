@@ -1,0 +1,8 @@
+name 'git_started'
+maintainer 'Chris Lewis'
+maintainer_email 'chris.lewis@hudl.com'
+license 'all_rights'
+description 'Installs/Configures git'
+long_description 'Installs/Configures git'
+version '0.1.0'
+depends 'git', '~> 4.3'
