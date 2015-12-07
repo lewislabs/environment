@@ -9,4 +9,10 @@ Vagrant.configure(2) do |config|
     chef.add_recipe "git"
     chef.cookbooks_path = "../chef-repo/cookbooks"
   end
+  config.vm.provision "docker" do |d|
+    d.pull_images "mongo:3.0"
+    d.run "mongo", 
+    	args: "-p '27017:27017'"
+  end
+  config.vm.network "forwarded_port", guest: 27017, host: 27017
 end
