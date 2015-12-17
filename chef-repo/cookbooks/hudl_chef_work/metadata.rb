@@ -1,0 +1,7 @@
+name 'hudl_chef_work'
+maintainer 'The Authors'
+maintainer_email 'you@example.com'
+license 'all_rights'
+description 'Installs/Configures hudl_chef_work'
+long_description 'Installs/Configures hudl_chef_work'
+version '0.1.0'
