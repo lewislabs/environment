@@ -8,6 +8,8 @@ Vagrant.configure(2) do |config|
   
   config.vm.synced_folder "../../../../.ssh/", "/synced_ssh"
   config.vm.synced_folder "../../chef-repo/", "/home/chris/Documents/Development/chef-repo"
+  config.vm.synced_folder "../../virtualenv/", "/home/chris/Documents/Development/virtualenv", create: true, group: 1010, owner: 1011
+  config.vm.synced_folder "../../../../.aws/", "/home/chris/.aws", group: 1010, owner: 1011
   config.berkshelf.enabled = true
   config.berkshelf.berksfile_path = "../chef-repo/cookbooks/hudl_work/Berksfile"
   config.vm.provision "chef_solo" do |chef|

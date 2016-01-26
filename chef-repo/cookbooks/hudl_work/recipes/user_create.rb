@@ -1,8 +1,10 @@
 group 'chris' do
+    gid '1010'
     action :create
 end 
 
 user 'chris' do
+  uid '1011'
   group 'chris'
   home '/home/chris'
   shell '/bin/bash'

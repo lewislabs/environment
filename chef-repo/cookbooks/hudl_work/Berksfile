@@ -4,3 +4,4 @@ metadata
 
 cookbook 'git'
 cookbook 'chef-dk', '~> 3.1.0'
+cookbook 'python', '~> 1.4.6'
